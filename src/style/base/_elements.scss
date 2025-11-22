@@ -12,6 +12,7 @@ main.container {
 	display: flex;
 	flex-direction: column;
 	gap: 7.5rem;
+    padding-bottom: 7.5rem;
 
 	&::before,
 	&::after {
