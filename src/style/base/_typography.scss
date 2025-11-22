@@ -1,18 +1,63 @@
-// src/styles/base/_typography.scss
-$font-primary: 'Geist', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-$font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+@use 'variables' as vars;
 
 :root {
-  --font-primary: #{$font-primary};
-  --font-mono: #{$font-mono};
+  --font-primary: #{vars.$font-primary};
+  --font-mono: #{vars.$font-mono};
 }
 
 /* default application */
 body {
-  font-family: var(--font-primary);
-  font-weight: 400;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+	font-family: var(--font-primary);
+	font-weight: 400;
+	line-height: 1.6;
+	
+	h1{
+		font-size: 4.5rem;
+		font-weight: 400;
+		line-height: 110%;
+	}
+
+	h2{
+		font-size: 3rem;
+		font-weight: 500;
+	}
+
+	h3{
+		font-size: 2.5rem;
+		font-weight: 400;
+	}
+
+	h4{
+		font-family: var(--font-mono);
+		font-size: 1.5rem;
+		font-weight: 300;
+		letter-spacing: 3px;
+	}
+
+	h5{
+		font-size: 1.25rem;
+		font-weight: 400;
+		letter-spacing: 1px;
+	}
+
+	h6{
+		font-family: var(--font-mono);
+		font-size: 1rem;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+
+	ul.header__menu{
+		li.header__menu-item {
+			a{
+				color: vars.$DBC-GreyScale-600;
+				font-family: var(--font-mono);
+				font-size: .75rem;
+			}
+			
+		}
+	}
+
 }
 
 /* utilities */

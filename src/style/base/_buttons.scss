@@ -1,0 +1,10 @@
+@use 'variables' as vars;
+
+a.btn--light-S{
+    font-size: .75rem;
+	color: vars.$DBC-GreyScale-500;
+    &:hover{
+	color: vars.$Brand-DBC-Mars-Flare;
+    }
+
+}

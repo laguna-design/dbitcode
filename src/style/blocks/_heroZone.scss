@@ -1,0 +1,16 @@
+@use '../base/variables' as vars;
+
+.hero{
+    .hero__content{
+        small.hero__tagline{
+			 color: vars.$Brand-DBC-Mars-Flare;
+        }
+
+        h1.hero__title{
+            span.hero__title-ascent{
+			color: vars.$Brand-DBC-Mars-Flare;
+		}
+
+        }
+    }
+}

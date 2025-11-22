@@ -1,5 +1,12 @@
-// src/styles/main.scss
+// base
+@use 'base/reset';
+@use 'base/variables';
 @use 'base/typography';
+@use 'base/buttons';
+
+
+//blocks
 @use 'blocks/header';
+@use 'blocks/heroZone';
 
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');

@@ -1,26 +1,34 @@
 .header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 1rem 2rem;
-
-&__logo-image {
-	height: 40px;
-}
-
-&__menu {
 	display: flex;
-	gap: 2rem;
-	list-style: none;
+	justify-content: space-between;
+	align-items: flex-end;
+	flex-direction: row;
+	padding: 1rem 2rem;
 
-	&-item a {
-	text-decoration: none;
-	/*color: $text-color;*/
-	font-weight: 500;
+	.header__col-1{
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-end;
+		flex-direction: row;
 	}
-}
 
-&__contact .btn {
-	//@include button-style($primary-color);
-}
+	&__logo-image {
+		height: 60px;
+	}
+
+	&__menu {
+		display: flex;
+		gap: 2rem;
+		list-style: none;
+
+		&-item a {
+		text-decoration: none;
+		/*color: $text-color;*/
+		font-weight: 500;
+		}
+	}
+
+	&__contact .btn {
+		//@include button-style($primary-color);
+	}
 }
