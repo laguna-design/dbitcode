@@ -1,10 +1,38 @@
 @use 'variables' as vars;
 
-a.btn--light-S{
-    font-size: .75rem;
-	color: vars.$DBC-GreyScale-500;
-    &:hover{
-	color: vars.$Brand-DBC-Mars-Flare;
-    }
+a.btn{
+	border-radius: .25rem;
+	font-weight: 400;
+}
 
+a.btn--M{
+	font-size: 1rem;
+	padding: .5rem 1rem;
+	letter-spacing: 1px;
+}
+
+a.btn--light{
+	color: vars.$DBC-GreyScale-500;
+	border: 1px solid;
+	border-color: vars.$DBC-GreyScale-200;
+	&:hover{
+		border-color: vars.$DBC-GreyScale-300;
+		color: vars.$DBC-GreyScale-600;
+	}
+}
+
+
+a.btn--dark{
+	color: vars.$DBC-GreyScale-100;
+	background-color: vars.$DBC-GreyScale-600;
+}
+
+
+
+a.btn--link{
+	font-size: .85rem;
+	color: vars.$DBC-GreyScale-500;
+	&:hover{
+		color: vars.$Brand-DBC-Mars-Flare;
+	}
 }

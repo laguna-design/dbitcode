@@ -17,7 +17,7 @@ export const DBTHeader = () => (
 			</nav>
 		</div>
 		<div className="header__contact">
-			<a href="#empecemos" className="btn btn--light-S">Hablemos 🡥</a>
+			<a href="#empecemos" className="btn btn--link">Empecemos 🡥</a>
 		</div>
 	</header>
 </>

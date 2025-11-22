@@ -1,13 +1,24 @@
-export const DbtMotionSeparator = () => (
-	<>
-		<ul>
-			<li>{'{Atención directa}'}</li>
-			<li>{'{Desarrollo de productos}'}</li>
-			<li>{'{Mantenimiento de sistemas linux}'}</li>
-			<li>{'{Calidad técnica}'}</li>
-			<li>{'{Transparencia}'}</li>
-			<li>{'{Solvencia técnica}'}</li>
-			<li>{'{Empatía operativa}'}</li>
-		</ul>
-	</>
-);
+export const DbtMotionSeparator = () => {
+  const items = [
+    '{Atención directa}',
+    '{Desarrollo de productos}',
+    '{Mantenimiento de sistemas linux}',
+    '{Calidad técnica}',
+    '{Transparencia}',
+    '{Solvencia técnica}',
+    '{Empatía operativa}',
+  ];
+
+  return (
+    <div className="separator-wrapper">
+      <ul className="separator">
+        {items.map((item, i) => (
+          <li key={i}>{item}</li>
+        ))}
+        {items.map((item, i) => (
+          <li key={`dup-${i}`}>{item}</li>
+        ))}
+      </ul>
+    </div>
+  );
+};

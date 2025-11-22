@@ -8,25 +8,23 @@ import { DBTFooter } from "../components/shared/DBTFooter";
 
 
 
-import { DbtMotionSeparator } from "../components/shared/DbtMotionSeparator";
-
 export const LandingPage = () => (
 	<>
-		<DBTHeader />
-		
-		<DBTHeroZone />
+			<DBTHeader />
+		<main className="container">
+			
+			<DBTHeroZone />
 
-		<DbtMotionSeparator />
+			<DBTLoQueHacemos />
 
-		<DBTLoQueHacemos />
+			<DBTServicios />
 
-		<DBTServicios />
+			<DBTCasosDeExito />
 
-		<DBTCasosDeExito />
+			<DBTHablemos />
 
-		<DBTHablemos />
-
-		<DBTFooter />
+		</main>
+			<DBTFooter />
 
 	</>
 );

@@ -1,15 +1,27 @@
+@use '../base/variables' as vars;
+
 .header {
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
 	flex-direction: row;
-	padding: 1rem 2rem;
+	padding: 0 2rem;
+	position:fixed;
+	background-color: vars.$DBC-GreyScale-100;
+	width: 100%;
+	border-bottom: 1px solid vars.$DBC-GreyScale-200;
+	z-index:1;
 
 	.header__col-1{
 		display: flex;
 		justify-content: flex-start;
 		align-items: flex-end;
 		flex-direction: row;
+		gap:2rem;
+	}
+
+	&__logo{
+		padding: 1rem 0;
 	}
 
 	&__logo-image {
@@ -22,13 +34,18 @@
 		list-style: none;
 
 		&-item a {
-		text-decoration: none;
-		/*color: $text-color;*/
-		font-weight: 500;
+			padding-bottom: calc(1rem + 2px);
+			display: flex;
+			font-weight: 500;
+			&:hover{
+				border-bottom: 2px solid vars.$Brand-DBC-Mars-Flare;
+				padding-bottom: 1rem;
+			}
 		}
 	}
 
 	&__contact .btn {
-		//@include button-style($primary-color);
+		display: flex;
+		padding-bottom: 1rem;
 	}
 }

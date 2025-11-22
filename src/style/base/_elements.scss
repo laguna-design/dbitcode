@@ -1,0 +1,32 @@
+@use 'variables' as vars;
+
+main.container {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 7.5rem;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		width: 1px;
+		background-image: repeating-linear-gradient(
+		to bottom,
+		vars.$DBC-GreyScale-300,
+		vars.$DBC-GreyScale-300 8px,
+		transparent 8px,
+		transparent 16px
+		);
+	}
+
+	&::before {
+		left: 0;
+	}
+
+	&::after {
+		right: 0;
+	}
+}
