@@ -1,20 +1,5 @@
+// src/styles/main.scss
+@use 'base/typography';
+@use 'blocks/header';
 
-
-body {
-
-}
-
-.hero {
-
-
-  h1 {
-
-  }
-
-  button {
-    
-
-    &:hover {
-    }
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');

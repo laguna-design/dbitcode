@@ -1,58 +1,32 @@
 export const DBTCasosDeExito = () => (
 	<>
-		<section className="dbt--casos-de-exito">
-
-			<section className="slider">
-				<h6>{'{Casos de éxito}'}</h6>
-				<div className="slides">
-					<div className="slide" id="producto1">
-						<article>
-							<h3>Producto 1</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at ipsum quam. Maecenas quis ipsum sit amet dui posuere lacinia nec a lorem.</p>
+		<section className="cases">
+			<div className="cases__slider">
+				<h6 className="cases__subtitle">Casos de éxito</h6>
+				<div className="cases__slides">
+					<div className="cases__slide" id="producto1">
+						<article className="cases__slide-content">
+						<h3 className="cases__slide-title">Producto 1</h3>
+						<p className="cases__slide-text">Lorem ipsum...</p>
 						</article>
-
-						<article>
-							<h5>Lorem ipsum</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at ipsum quam. </p>
-						</article>
-						<img src="producto1.png" alt="Producto 1" />
+						<img className="cases__slide-image" src="producto1.png" alt="Producto 1" />
 					</div>
-					<div className="slide" id="producto2">
-						<article>
-							<h3>Producto 2</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at ipsum quam. Maecenas quis ipsum sit amet dui posuere lacinia nec a lorem.</p>
-						</article>
 
-						<article>
-							<h5>Lorem ipsum</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at ipsum quam. </p>
+					<div className="cases__slide" id="producto2">
+						<article className="cases__slide-content">
+						<h3 className="cases__slide-title">Producto 2</h3>
+						<p className="cases__slide-text">Lorem ipsum...</p>
 						</article>
-						<img src="producto1.png" alt="Producto 1" />
-					</div>
-					<div className="slide" id="producto3">
-						<article>
-							<h3>Producto 3</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at ipsum quam. Maecenas quis ipsum sit amet dui posuere lacinia nec a lorem.</p>
-						</article>
-
-						<article>
-							<h5>Lorem ipsum</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean at ipsum quam. </p>
-						</article>
-						<img src="producto1.png" alt="Producto 1" />
+						<img className="cases__slide-image" src="producto2.png" alt="Producto 2" />
 					</div>
 				</div>
-
-				<nav className="slider-nav">
-					<ul>
-						<li><a href="#producto1">Producto 1</a></li>
-						<li><a href="#producto2">Producto 2</a></li>
-						<li><a href="#producto3">Producto 3</a></li>
+				<nav className="cases__nav">
+					<ul className="cases__nav-list">
+						<li className="cases__nav-item"><a href="#producto1">Producto 1</a></li>
+						<li className="cases__nav-item"><a href="#producto2">Producto 2</a></li>
 					</ul>
 				</nav>
-			</section>
-
-			
+			</div>
 		</section>
 	</>
 );
