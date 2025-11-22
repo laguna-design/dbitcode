@@ -1,0 +1,35 @@
+@use '../base/variables' as vars;
+
+.cases{
+	.cases__slider{
+		display: flex;
+		flex-direction: column;
+		padding: 0 2rem;
+		gap: 1.5rem;
+		.cases__wrapper{
+			display: flex;
+			flex-direction: row;
+			gap: 2rem;
+			.cases__nav{
+				width: 20%;
+				ul.cases__nav-list{
+					li.cases__nav-item{
+						a{
+							font-family: var(--font-mono);
+							color: vars.$DBC-GreyScale-300;
+							font-weight: 500;
+							font-size: 1rem;
+							&:hover{
+								color: vars.$DBC-GreyScale-600;
+							}
+
+							&.current{
+								color: vars.$DBC-GreyScale-600;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

@@ -14,23 +14,26 @@ body {
 	h1{
 		font-size: 4.5rem;
 		font-weight: 400;
-		line-height: 110%;
+		line-height: 130%;
 	}
 
 	h2{
 		font-size: 3rem;
 		font-weight: 500;
+		line-height: 130%;
 	}
 
 	h3{
 		font-size: 2.5rem;
 		font-weight: 400;
+		line-height: 130%;
 	}
 
 	h4{
 		font-family: var(--font-mono);
 		font-size: 1.5rem;
 		font-weight: 300;
+		line-height: 130%;
 		letter-spacing: 3px;
 	}
 
@@ -38,6 +41,7 @@ body {
 		font-size: 1.15rem;
 		font-weight: 400;
 		letter-spacing: 1px;
+		line-height: 130%;
 	}
 
 	h6{
@@ -45,6 +49,7 @@ body {
 		font-size: 1rem;
 		font-weight: 600;
 		letter-spacing: 1px;
+		line-height: 130%;
 	}
 
 	ul.header__menu{

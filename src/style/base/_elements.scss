@@ -1,5 +1,12 @@
 @use 'variables' as vars;
 
+p{
+	font-size: 1rem;
+	color:vars.$DBC-GreyScale-500;
+	font-weight:400;
+}
+
+
 main.container {
 	position: relative;
 	display: flex;
@@ -29,4 +36,18 @@ main.container {
 	&::after {
 		right: 0;
 	}
+}
+
+.landing__section{
+	display: flex;
+	flex-direction: column;
+	padding: 0 2rem;
+}
+
+[class$="__subtitle"] {
+	color: vars.$Brand-DBC-Mars-Flare;
+	font-family: var(--font-primary);
+	font-size: 1rem;
+	letter-spacing: 2px;
+	font-weight: 500;
 }
