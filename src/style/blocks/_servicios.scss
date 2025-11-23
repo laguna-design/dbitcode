@@ -1,8 +1,13 @@
+@use "../abstracts/mixins" as mixins;
+
 .services{
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
 	padding: 0 2rem;
 	gap: 3rem;
+	@include mixins.respond-to("overtablet"){
+		flex-direction: row;
+	}
 	.services__intro{
 		width: 45%;
 		display: flex;

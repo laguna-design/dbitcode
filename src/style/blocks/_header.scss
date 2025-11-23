@@ -1,51 +1,56 @@
-@use '../base/variables' as vars;
+@use '../abstracts/variables' as vars;
+@use "../abstracts/mixins" as mixins;
 
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
-	flex-direction: row;
-	padding: 0 2rem;
-	position:fixed;
-	background-color: vars.$DBC-GreyScale-100;
-	width: 100%;
-	border-bottom: 1px solid vars.$DBC-GreyScale-200;
-	z-index:1;
-
-	.header__col-1{
+	display: none;
+	@include mixins.respond-to("overtablet"){
 		display: flex;
-		justify-content: flex-start;
+		justify-content: space-between;
 		align-items: flex-end;
 		flex-direction: row;
-		gap:2rem;
-	}
-
-	&__logo{
-		padding: 1rem 0;
-	}
-
-	&__logo-image {
-		height: 60px;
-	}
-
-	&__menu {
-		display: flex;
-		gap: 2rem;
-		list-style: none;
-
-		&-item a {
-			padding-bottom: calc(1rem + 2px);
+		padding: 0 2rem;
+		position:fixed;
+		background-color: vars.$DBC-GreyScale-100;
+		width: 100%;
+		border-bottom: 1px solid vars.$DBC-GreyScale-200;
+		z-index:1;
+	
+		.header__col-1{
 			display: flex;
-			font-weight: 500;
-			&:hover{
-				border-bottom: 2px solid vars.$Brand-DBC-Mars-Flare;
-				padding-bottom: 1rem;
+			justify-content: flex-start;
+			align-items: flex-end;
+			flex-direction: row;
+			gap:2rem;
+		}
+	
+		&__logo{
+			padding: 1rem 0;
+		}
+	
+		&__logo-image {
+			height: 60px;
+		}
+	
+		&__menu {
+			display: flex;
+			gap: 2rem;
+			list-style: none;
+	
+			&-item a {
+				padding-bottom: calc(1rem + 2px);
+				display: flex;
+				font-weight: 500;
+				&:hover{
+					border-bottom: 2px solid vars.$Brand-DBC-Mars-Flare;
+					padding-bottom: 1rem;
+				}
 			}
 		}
-	}
-
-	&__contact .btn {
-		display: flex;
-		padding-bottom: 1rem;
+	
+		&__contact .btn {
+			display: flex;
+			padding-bottom: 1rem;
+		}
+	
 	}
 }

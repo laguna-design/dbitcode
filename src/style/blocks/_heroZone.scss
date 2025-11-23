@@ -1,12 +1,18 @@
-@use '../base/variables' as vars;
+@use '../abstracts/variables' as vars;
+@use "../abstracts/mixins" as mixins;
 
 .hero{
 	height: calc(100vh - 2rem);
 	display: flex;
 	align-items: flex-end;
 	flex-direction: column;
-	justify-content: flex-end;
+	justify-content: space-between;
 	gap: 4.5rem;
+	padding-top: 10rem;
+	@include mixins.respond-to("overtablet"){
+		justify-content: flex-end;
+		padding-top: 0;
+	}
 	.hero__content{
 		width:100%;
 		padding: 0 2rem;
@@ -34,9 +40,28 @@
 		}
 
 		h1.hero__title{
+			display: flex;
+			flex-direction: column;
+			white-space: nowrap;
+			gap: 0;
+			line-height:3.5rem;
+			@include mixins.respond-to("overdesktop"){
+				flex-direction: row;
+				line-height:initial;
+			}
+			@include mixins.respond-to("overtablet"){
+				gap:1rem;
+			}
 			span.hero__title-ascent{
 				color: vars.$Brand-DBC-Mars-Flare;
-			}	
+				min-height: 3.5rem;
+
+			@include mixins.respond-to("overtablet"){
+				min-height: 6rem;
+			}
+
+
+			}
 		}
 		h5.hero__description{
 			b{

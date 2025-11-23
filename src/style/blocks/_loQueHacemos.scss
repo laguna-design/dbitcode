@@ -1,15 +1,19 @@
-@use '../base/variables' as vars;
-
+@use '../abstracts/variables' as vars;
+@use "../abstracts/mixins" as mixins;
 
 .lo-que-hacemos{
 	gap: 3rem;
 	.lo-que-hacemos__list {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: repeat(2, auto);
+		display: flex;
+		flex-direction: column;
 		gap: 2rem;
 		margin: 0;
 		padding: 0;
+		@include mixins.respond-to("overtablet"){
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(2, auto);
+		}
 		.lo-que-hacemos__term {
 			.lo-que-hacemos__definition {
 				font-family: var(--font-primary);
