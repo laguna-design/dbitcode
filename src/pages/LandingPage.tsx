@@ -5,6 +5,7 @@ import { DBTServicios } from "../components/layout/DBTServicios";
 import { DBTCasosDeExito } from "../components/layout/DBTCasosDeExito";
 import { DBTHablemos } from "../components/layout/DBTHablemos";
 import { DBTFooter } from "../components/shared/DBTFooter";
+import DBTForm from "../components/shared/DBTForm"
 
 
 
@@ -14,6 +15,8 @@ export const LandingPage = () => (
 		<main className="container">
 			
 			<DBTHeroZone />
+
+			<DBTForm />
 
 			<DBTLoQueHacemos />
 

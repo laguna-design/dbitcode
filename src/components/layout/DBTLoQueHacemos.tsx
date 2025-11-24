@@ -10,41 +10,52 @@ export const DBTLoQueHacemos = () => (
 			</article>
 
 			<dl className="lo-que-hacemos__list">
-				<dt className="lo-que-hacemos__term">
-					<h6>Fiabilidad operativa</h6>
+			
+				<div>
+					<dt className="lo-que-hacemos__term">
+						<h6>Fiabilidad operativa</h6>
+					</dt>
 					<dd className="lo-que-hacemos__definition">
 						Entregas puntuales, soluciones estables y soporte continuo.
 					</dd>
-				
-				</dt>
+				</div>
 
-				<dt className="lo-que-hacemos__term">
-					<h6>Empatía técnica</h6>
+				<div>
+					<dt className="lo-que-hacemos__term">
+						<h6>Empatía técnica</h6>
+					</dt>
 					<dd className="lo-que-hacemos__definition">
 						Arquitecturas limpias, escalables y mantenibles.
 					</dd>
-				</dt>
+				</div>
 
-				<dt className="lo-que-hacemos__term">
-					<h6>Compromiso a largo plazo</h6>
+				<div>	
+					<dt className="lo-que-hacemos__term">
+						<h6>Compromiso a largo plazo</h6>
+					</dt>
 					<dd className="lo-que-hacemos__definition">
 						Acompañamiento durante toda la vida útil del producto.
 					</dd>
-				</dt>
+				</div>
+				
 
-				<dt className="lo-que-hacemos__term">
-					<h6>Comunicación clara</h6>
+				<div>	
+					<dt className="lo-que-hacemos__term">
+						<h6>Comunicación clara</h6>
+					</dt>
 					<dd className="lo-que-hacemos__definition">
 						Transparencia en cada fase del proyecto, sin tecnicismos innecesarios.
 					</dd>
-				</dt>
-
-				<dt className="lo-que-hacemos__term">
-					<h6>Agilidad y respuesta</h6>
+				</div>
+				
+				<div>	
+					<dt className="lo-que-hacemos__term">
+						<h6>Agilidad y respuesta</h6>
+					</dt>
 					<dd className="lo-que-hacemos__definition">
 						Tiempos de reacción reducidos y flexibilidad ante cambios.
 					</dd>
-				</dt>
+				</div>
 				
 			</dl>
 		</section>
