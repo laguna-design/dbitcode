@@ -13,8 +13,12 @@ function DBTModal({ isOpen, onClose, children }: ModalProps) {
     <div className="modal">
       <div className="modal__overlay" onClick={onClose}></div>
       <div className="modal__content">
+      <header>
+        <h3>{'{Escríbenos}'}</h3>
+        <p>Escríbenos un mensaje con lo que necesites y te responderemos lo antes posible</p>
+        </header>
         <button className="modal__close" onClick={onClose}>
-          ✕
+          ✕ Cerrar
         </button>
         {children}
       </div>

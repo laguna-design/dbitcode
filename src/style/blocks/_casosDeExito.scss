@@ -1,52 +1,36 @@
 @use '../abstracts/variables' as vars;
+.cases {
+  .cases__slides {
+    position: relative;
 
-.cases{
-	.cases__slider{
-		display: flex;
-		flex-direction: column;
-		padding: 0 2rem;
-		gap: 1.5rem;
-		.cases__wrapper{
-			display: flex;
-			flex-direction: row;
-			gap: 2rem;
-			.cases__slides{
-				gap: 2rem;
-				display: flex;
-				flex-direction: column;
-				.cases__slide{
-					display: flex;
-					flex-direction: column;
-					gap: 1rem;
-					.cases__slide-content{
-						width:45%;
-						.cases__slide-text{
-							font-size: 1rem;
-							color: vars.$DBC-GreyScale-500;
-						}
-					}
-				}
-			}
-			.cases__nav{
-				width: 20%;
-				ul.cases__nav-list{
-					li.cases__nav-item{
-						a{
-							font-family: var(--font-mono);
-							color: vars.$DBC-GreyScale-300;
-							font-weight: 500;
-							font-size: 1.2rem;
-							&:hover{
-								color: vars.$DBC-GreyScale-600;
-							}
+    .cases__slide {
+    //   display: none;
 
-							&.current{
-								color: vars.$DBC-GreyScale-600;
-							}
-						}
-					}
-				}
-			}
-		}
-	}
+      &.active {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  }
+
+  .cases__nav-list {
+    .cases__nav-item button {
+      font-family: var(--font-mono);
+      color: vars.$DBC-GreyScale-300;
+      font-weight: 500;
+      font-size: 1.2rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        color: vars.$DBC-GreyScale-600;
+      }
+
+      &.current {
+        color: vars.$DBC-GreyScale-600;
+      }
+    }
+  }
 }
