@@ -60,10 +60,11 @@ body {
 
 	ul.header__menu{
 		li.header__menu-item {
-			a{
+			a, button{
 				color: vars.$DBC-GreyScale-600;
 				font-family: var(--font-mono);
 				font-size: .85rem;
+				cursor: pointer;
 			}
 			
 		}
