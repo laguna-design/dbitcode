@@ -58,6 +58,13 @@ body {
 		line-height: 130%;
 	}
 
+	form,
+	form *,
+	.modal,
+	.modal *{
+		font-family: var(--font-primary);
+	}
+
 	ul.header__menu{
 		li.header__menu-item {
 			a, button{

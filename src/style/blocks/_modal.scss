@@ -1,34 +1,44 @@
+@use '../abstracts/variables' as vars;
+
 .modal {
-  position: fixed;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+	position: fixed;
+	inset: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1000;
 
-  &__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-  }
+	&__overlay {
+		position: absolute;
+		inset: 0;
+		background: rgba(53, 53, 53, 0.1);
+	}
 
-  &__content {
-    position: relative;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 8px;
-    max-width: 600px;
-    width: 100%;
-    z-index: 1001;
-  }
+	&__content {
+		position: relative;
+		background: vars.$DBC-GreyScale-100;
+		padding: 2rem;
+		border-radius: 8px;
+		max-width: 920px;
+		width: 100%;
+		z-index: 1001;
+	}
+	
+	&__header{
+		h3{
+			color: vars.$Brand-DBC-Mars-Flare;	
+		}
+	}
 
-  &__close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.25rem;
-    cursor: pointer;
-  }
+	&__close {
+		position: absolute;
+		top: 1rem;
+		right: 1rem;
+		background: none;
+		border: none;
+		font-size: .85rem;
+		cursor: pointer;
+		color: vars.$DBC-GreyScale-500;
+	}
 }

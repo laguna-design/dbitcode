@@ -10,6 +10,15 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, blockquote, dl, dd {
 	padding: 0;
 }
 
+
+html {
+	font-size: 16px; 
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
 ul, ol {
 	list-style: none;
 }
@@ -30,15 +39,6 @@ button, input, textarea, select {
 	background: none;
 	padding: 0;
 	margin: 0;
-}
-
-html {
-	font-size: 16px; 
-}
-
-body {
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
 }
 
 .container{

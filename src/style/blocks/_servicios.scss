@@ -1,4 +1,6 @@
+@use "../abstracts/variables" as vars;
 @use "../abstracts/mixins" as mixins;
+
 
 .services{
 	display: flex;
@@ -9,15 +11,32 @@
 		flex-direction: row;
 	}
 	.services__intro{
-		width: 45%;
+		width: 55%;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap:1.5rem;
 	}
-	.services__carousel{
-		width: 55%;
+
+	.services__carousel-wrapper {
+		overflow: hidden;
+		width: 45%;
+	}
+	
+	ul.services__carousel {
 		display: flex;
 		flex-direction: row;
+		gap: 1.5rem;
+		white-space: nowrap;
+		animation: scroll 20s linear infinite; 
+	
+		li {
+			color: vars.$DBC-GreyScale-400;
+			font-family: var(--font-mono);
+			font-weight: 500;
+			letter-spacing: 1px;
+			font-size: .9rem;
+			flex-shrink: 0;
+		}
 	}
 }

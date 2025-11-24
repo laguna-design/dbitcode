@@ -4,6 +4,7 @@
 @use 'abstracts/typography';
 @use 'base/buttons';
 @use 'base/elements';
+@use 'base/animations';
 
 
 //blocks
@@ -15,6 +16,7 @@
 @use 'blocks/hablemos';
 @use 'blocks/footer';
 @use 'blocks/modal';
+@use 'blocks/form';
 
 
 @import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&display=swap');

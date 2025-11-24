@@ -13,13 +13,25 @@ export const DBTServicios = ({ onOpenForm }: ServiciosProps) => (
 				</div>
 				<button className="btn btn--M btn--light" onClick={onOpenForm}>¿Qué necesitas? 🡥</button>
 			</article>
-			<div className="services__carousel">
-				<div className="services__logo"><img src="logo1.png" alt="Logo 1" /></div>
-				<div className="services__logo"><img src="logo1.png" alt="Logo 2" /></div>
-				<div className="services__logo"><img src="logo1.png" alt="Logo 3" /></div>
-				<div className="services__logo"><img src="logo1.png" alt="Logo 4" /></div>
-				<div className="services__logo"><img src="logo1.png" alt="Logo 5" /></div>
+			<div className="services__carousel-wrapper">
+				<ul className="services__carousel">
+					<li><img src="logos/Python.png" alt="Python" /></li>
+					<li><img src="logos/react.png" alt="React" /></li>
+					<li><img src="logos/sql.png" alt="SQL" /></li>
+					<li><img src="logos/synfony.png" alt="Synfony" /></li>
+					<li><img src="logos/vue.png" alt="Vue" /></li>
+					<li><img src="logos/android.png" alt="Android" /></li>
+					<li><img src="logos/docker.png" alt="Docker" /></li>
+					<li><img src="logos/git.png" alt="Git" /></li>
+					<li><img src="logos/ios.png" alt="IOS" /></li>
+					<li><img src="logos/java.png" alt="Java" /></li>
+					<li><img src="logos/laravel.png" alt="Laravel" /></li>
+					<li><img src="logos/linux.png" alt="Linux" /></li>
+					<li><img src="logos/n8n.png" alt="n8n" /></li>
+					<li><img src="logos/node.png" alt="Node" /></li>
+				</ul>
 			</div>
+
 		</section>
 	</>
 );
