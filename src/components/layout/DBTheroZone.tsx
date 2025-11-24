@@ -1,8 +1,11 @@
 import { useTypewriter } from "../../hooks/useTypewriter";
 import { DbtMotionSeparator } from "../shared/DbtMotionSeparator"
 
+type HeroProps = {
+	onOpenForm: () => void;
+};
 
-export const DBTHeroZone = () => {
+export const DBTHeroZone = ({ onOpenForm }: HeroProps) => {
 	
 	const typedText = useTypewriter(["{simple}", "{limpio}", "{impecable}"]);
 
@@ -20,8 +23,9 @@ export const DBTHeroZone = () => {
 				Cuenta con nosotros, nuestra velocidad de respuesta es insuperable
 			</h5>
 			<ul className="hero__actions">
-				<li><a href="#contact" className="btn btn--M btn--light">Conócenos</a></li>
-				<li><a href="#contact" className="btn btn--M btn--dark">Hablemos 🡥</a></li>
+				<li><button className="btn btn--M btn--light">Conócenos</button></li>
+				<li><button className="btn btn--M btn--dark" onClick={onOpenForm}>Hablemos 🡥</button></li>
+
 			</ul>
 		</div>
 		<DbtMotionSeparator />

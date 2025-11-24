@@ -1,18 +1,19 @@
 @use '../abstracts/variables' as vars;
 
-a.btn{
+button.btn{
 	border-radius: .25rem;
 	font-weight: 400;
+	cursor: pointer;
 }
 
-a.btn--M{
+button.btn--M{
 	font-size: 0.9rem;
 	padding: 0.5rem 1rem;
 	letter-spacing: 1px;
 	line-height: 1.2rem;
 }
 
-a.btn--light{
+button.btn--light{
 	color: vars.$DBC-GreyScale-500;
 	border: 1px solid;
 	border-color: vars.$DBC-GreyScale-200;
@@ -23,14 +24,14 @@ a.btn--light{
 }
 
 
-a.btn--dark{
+button.btn--dark{
 	color: vars.$DBC-GreyScale-100;
 	background-color: vars.$DBC-GreyScale-600;
 }
 
 
 
-a.btn--link{
+button.btn--link{
 	font-size: .85rem;
 	color: vars.$DBC-GreyScale-500;
 	&:hover{

@@ -1,6 +1,8 @@
 import DbitcodeLogo from '/dbitcode.svg'
 
-export const DBTFooter = () => (
+type FooterProps = {onOpenForm: () => void;};
+
+export const DBTFooter = ({ onOpenForm }: FooterProps) => (
 <>
 	<footer className="footer">
 		<div className="footer__main">
@@ -19,7 +21,10 @@ export const DBTFooter = () => (
 					<li className="footer__menu-item"><a href="#home">¿Qué hacemos?</a></li>
 					<li className="footer__menu-item"><a href="#servicios">Servicios</a></li>
 					<li className="footer__menu-item"><a href="#casos-de-exito">Casos de éxito</a></li>
-					<li className="footer__menu-item"><a href="#hablemos">Hablemos</a></li>
+					<li className="footer__menu-item">
+						<button className="btn btn--M btn--light" onClick={onOpenForm}>Hablemos 🡥</button>
+					</li>
+
 					</ul>
 				</div>
 				<section className="footer__contact">

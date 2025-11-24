@@ -1,6 +1,8 @@
 import DbitcodeLogo from '/dbitcode.svg'
 
-export const DBTHeader = () => (
+type HeaderProps = {onOpenForm: () => void;};
+
+export const DBTHeader = ({ onOpenForm }: HeaderProps) => (
 	<>
 	<header className="header">
 		<div className='header__col-1'>
@@ -17,7 +19,7 @@ export const DBTHeader = () => (
 			</nav>
 		</div>
 		<div className="header__contact">
-			<a href="#empecemos" className="btn btn--link">Empecemos 🡥</a>
+			<button className="btn btn--link" onClick={onOpenForm}>Empecemos 🡥</button>
 		</div>
 	</header>
 </>

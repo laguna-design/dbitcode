@@ -1,4 +1,6 @@
-export const DBTHablemos = () => (
+type HablemosProps = {onOpenForm: () => void;};
+
+export const DBTHablemos = ({ onOpenForm }: HablemosProps) => (
 	<>
 		<section className="hablemos">
 			<article className="hablemos__content">
@@ -9,7 +11,8 @@ export const DBTHablemos = () => (
 						Comienza a ser impecable, no te conformes con menos
 					</p>
 				</div>
-				<a href="#contact" className="btn btn--M btn--dark">Hablemos 🡥</a>
+				<button className="btn btn--M btn--dark" onClick={onOpenForm}>Hablemos 🡥</button>
+
 			</article>
 		</section>
 	</>

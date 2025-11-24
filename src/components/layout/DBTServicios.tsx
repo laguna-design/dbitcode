@@ -1,4 +1,8 @@
-export const DBTServicios = () => (
+type ServiciosProps = {
+	onOpenForm: () => void;
+};
+
+export const DBTServicios = ({ onOpenForm }: ServiciosProps) => (
 	<>
 		<section className="services">
 			<article className="services__intro">
@@ -7,7 +11,7 @@ export const DBTServicios = () => (
 					<h2 className="services__title">No vendemos humo</h2>
 					<p className="services__description">Estas son las teconologías que dominamos. No hacemos trabajo a medias, nuestro código es sólido, sostenible y enfocado a quitarte dolores de cabeza.</p>
 				</div>
-				<a href="#contact" className="btn btn--M btn--light">¿Qué necesitas? 🡥</a>
+				<button className="btn btn--M btn--light" onClick={onOpenForm}>¿Qué necesitas? 🡥</button>
 			</article>
 			<div className="services__carousel">
 				<div className="services__logo"><img src="logo1.png" alt="Logo 1" /></div>
