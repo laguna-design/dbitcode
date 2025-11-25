@@ -1,33 +1,38 @@
 @use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixins;
 
 .form{
-    display: flex;
+	display: flex;
 	flex-direction: column;
-    gap: 1.5rem;
+	gap: 1.5rem;
 
 	&__col-2{
 		display: flex;
-		flex-direction: row;
-        gap:2rem;
-        > .form__group:first-child{
-            width: 25%;
-        }
-        > .form__group:nth-child(2){
-            width: 75%;
-        }
+		flex-direction: column;
+		gap:2rem;
+		@include mixins.respond-to("overtablet") {
+			flex-direction: row;
+			> .form__group:first-child{
+				width: 25%;
+			}
+			> .form__group:nth-child(2){
+				width: 75%;
+			}
+		}
+
 	}
 
-    &__group{
-        display: flex;
+	&__group{
+		display: flex;
 		flex-direction: column;
-        gap: 0.2rem;
-    }
+		gap: 0.2rem;
+	}
 
-    &__label{
-        font-size: 14px;
-        font-weight: 400;
-        text-transform: uppercase;
-    }
+	&__label{
+		font-size: 14px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
 
 }
 
@@ -43,13 +48,13 @@ textarea.form__textarea{
 .form__checkbox-label{
 	font-size: .9rem;
 	color: vars.$DBC-GreyScale-500;
-    display:flex;
-    flex-direction: row;
-    gap: 0.6rem;
+	display:flex;
+	flex-direction: row;
+	gap: 0.6rem;
 }
 
 .form__actions{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
 }

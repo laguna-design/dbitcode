@@ -1,13 +1,20 @@
 @use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mixins;
+
 
 .modal {
 	position: fixed;
 	inset: 0;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-end;
 	align-items: center;
 	z-index: 1000;
+	
+	@include mixins.respond-to("overtablet") {
+		justify-content: center;
+		padding: 0 2rem;
+	}
 
 	&__overlay {
 		position: absolute;
@@ -21,16 +28,18 @@
 		display: flex;
 		flex-direction: column;
 		padding: 2.5rem;
-		border-radius: 1rem;
-		max-width: 801px;
+		border-radius: 1rem 1rem 0rem 0rem;
+		max-width: 700px;
 		width: 100%;
 		z-index: 1001;
 		gap: 2rem;
-
-		// Initial state
-    transform: translateY(32px);
-    opacity: 0;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+		transform: translateY(32px);
+		opacity: 0;
+		transition: transform 0.3s ease, opacity 0.3s ease;
+		@include mixins.respond-to("overtablet") {
+			border-radius: 1rem;
+			max-width: 800px;
+		}
 	}
 	
 	&__header{

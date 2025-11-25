@@ -42,14 +42,36 @@ return (
 		</div>
 
 		<button
-		className="header__hamburger"
+		className={`header__hamburger ${isMobileMenuOpen ? "is-open" : ""}`}
 		onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 		aria-label="Abrir menú"
 		>
-		<svg width="32" height="11" viewBox="0 0 32 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-			<line x1="0.5" y1="0.5" x2="31.5" y2="0.5" stroke="#4C4C4C" stroke-linecap="round"/>
-			<line x1="0.5" y1="10.5" x2="31.5" y2="10.5" stroke="#4C4C4C" stroke-linecap="round"/>
-		</svg>
+			<svg
+				width="32"
+				height="11"
+				viewBox="0 0 32 11"
+				fill="none"
+				xmlns="http://www.w3.org/2000/svg"
+			>
+				<line
+				className="hamburger-line line-top"
+				x1="0.5"
+				y1="0.5"
+				x2="31.5"
+				y2="0.5"
+				stroke="#4C4C4C"
+				strokeLinecap="round"
+				/>
+				<line
+				className="hamburger-line line-bottom"
+				x1="0.5"
+				y1="10.5"
+				x2="31.5"
+				y2="10.5"
+				stroke="#4C4C4C"
+				strokeLinecap="round"
+				/>
+			</svg>
 		</button>
 
 		<nav className={`header__nav ${isMobileMenuOpen ? "is-open" : ""}`}>

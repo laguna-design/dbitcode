@@ -37,15 +37,41 @@
 	&__hamburger {
 		background: none;
 		border: none;
-		font-size: 2rem;
 		cursor: pointer;
-		    display: flex;
-    align-items: center;
+		display: flex;
+		align-items: center;
+
+		.hamburger-line {
+			transition: transform 0.3s ease, y 0.3s ease, opacity 0.3s ease;
+			transform-origin: center;
+		}
+
+		&.is-open {
+			> svg{
+				height: 32px;
+				width: 32px;
+			}
+			
+			.line-top {
+				transform: rotate(45deg);
+			
+			}
+			.line-bottom {
+				transform: rotate(-45deg);
+			}
+
+			.line-top, .line-bottom{
+				transform-origin: 12px 5px;
+				stroke: #000;
+			}
+		}
 
 		@include mixins.respond-to("overtablet") {
 			display: none;
 		}
 	}
+
+
 
 	&__nav {
 		display: none;
