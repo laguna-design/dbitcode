@@ -1,4 +1,6 @@
 @use '../abstracts/variables' as vars;
+@use "../abstracts/mixins" as mixins;
+
 .cases {
     display: flex;
     flex-direction: column;
@@ -6,12 +8,19 @@
 	gap:.5rem;
 		&__wrapper{
 			display: flex;
-			flex-direction: row;
-			gap: 2rem;
+			flex-direction: column;
+			gap: 1rem;
+			@include mixins.respond-to("overtablet"){
+				flex-direction: row;
+				gap:2rem
+			}
 		}
 		&__slides {
 			position: relative;
-			width: 75%;
+			width: 100%;
+			@include mixins.respond-to("overtablet"){
+				width: 75%;;
+			}
 			
 		}
 		&__slide {
@@ -24,24 +33,52 @@
 			}
 	
 	&__nav{
-		width: 25%;
+		width: 100%;
+		@include mixins.respond-to("overtablet"){
+			width: 25%;;
+		}
 		&-list {
-			.cases__nav-item button {
-				font-family: var(--font-mono);
-				color: vars.$DBC-GreyScale-300;
-				font-weight: 500;
-				font-size: 1.2rem;
-				text-align: left;
-				background: none;
-				border: none;
-				cursor: pointer;
-				&:hover {
-					color: vars.$DBC-GreyScale-600;
-				}
+			display: flex;
+			flex-direction: row;
+			gap: 2rem;
+			border-bottom: 1px solid vars.$DBC-GreyScale-101;
+			overflow-y: scroll;
+			@include mixins.respond-to("overtablet"){
+				border:0;
+				flex-direction: column;
+				gap: .5rem;
+				overflow-y: initial;
+			}
+			.cases__nav-item{
 			
-				&.current {
-					color: vars.$DBC-GreyScale-600;
-				}
+				button {
+					font-family: var(--font-mono);
+					font-weight: 500;
+					background: none;
+					color: vars.$DBC-GreyScale-300;
+					cursor: pointer;
+					padding: .5rem 1rem;
+					white-space: nowrap;
+					@include mixins.respond-to("overtablet"){
+						padding: 0;
+						color: vars.$DBC-GreyScale-300;
+						font-weight: 500;
+						font-size: 1.2rem;
+						text-align: left;
+						border: none;
+					}
+					&:hover {
+						color: vars.$DBC-GreyScale-600;
+					}
+				
+					&.current {
+						color: vars.$DBC-GreyScale-600;
+						border-bottom: 2px solid vars.$Brand-DBC-Mars-Flare;
+						@include mixins.respond-to("overtablet"){
+							border:0;
+						}
+					}
+			}
 			}
 		}
 	}

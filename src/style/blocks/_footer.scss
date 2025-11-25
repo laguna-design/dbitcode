@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as vars;
+@use "../abstracts/mixins" as mixins;
 
 .footer{
 	display: flex;
@@ -10,15 +11,24 @@
 	font-weight: 400;
 	&__main{
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
-		padding: 3rem 2.5rem 5rem 2.5rem;
+		padding: 2.5rem 2rem 4rem 2rem;
+		gap: 2.5rem;
+		@include mixins.respond-to("overtablet"){
+			flex-direction: row;
+			padding: 3rem 2.5rem 5rem 2.5rem;
+			gap: 0rem;
+		}
 	}
 	&__logo{
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		align-items: flex-start;
 		gap:1.5rem;
+		@include mixins.respond-to("overtablet"){
+			flex-direction: row;
+		}
 		.footer__impecables{
 			color: vars.$Brand-DBC-Mars-Flare;
 		}
@@ -29,9 +39,14 @@
 		flex-direction: row;
 		align-items: flex-start;
 		gap: 6rem;
-		width: 50%;
-		justify-content: flex-end;
-		padding: 0 2rem;
+		width: 100%;
+		justify-content: space-between;
+		padding: 0;
+		@include mixins.respond-to("overtablet"){
+			width: 50%;
+			padding: 0 2rem;
+			justify-content: flex-end;
+		}
 		font-size: .87rem;
 		.footer__nav-mainMenu{
 			display: flex;
@@ -48,6 +63,10 @@
 				li.footer__menu-item{
 					color:vars.$DBC-GreyScale-400;
 					font-size: .87rem;
+					button.btn{
+						text-align: left;
+						white-space: nowrap;
+					}
 				}
 			}
 		}
@@ -55,18 +74,30 @@
 
 	&__bottom{
 		display: flex;
-		flex-direction: row;
+		flex-direction: column;
 		justify-content: space-between;
-		align-items: center;
+		align-items: flex-start;
 		background-color: vars.$DBC-GreyScale-600;
 		color:vars.$DBC-GreyScale-100;
 		font-size: .8rem;
 		font-weight: 300;
 		padding: .5rem 1.5rem;
+		gap: 0.3rem;
+		@include mixins.respond-to("overtablet"){
+			flex-direction: row;
+			align-items: center;
+		}
 		.footer__legal{
 			display: flex;
 			flex-direction: row;
-			gap: 1.5rem;
+			justify-content: space-between;
+			gap: 1rem;
+			width: 100%;
+			@include mixins.respond-to("overtablet"){
+				justify-content: unset;
+				width: unset;
+				gap: 1.5rem;
+			}
 			&-title{
 				font-family: var(--font-primary);
 				font-size: .9rem;
@@ -74,7 +105,10 @@
 			&-menu{
 				display: flex;
 				flex-direction: row;
-				gap: .8rem;
+				gap: 1.5rem;
+				@include mixins.respond-to("overtablet"){
+					gap: .8rem;
+				}
 			}
 			&-item{
 				button.btn{
@@ -82,6 +116,10 @@
 					font-size: .8rem;
 				}
 			}
+		}
+		.footer__copyright{
+			color:vars.$DBC-GreyScale-300;
+			font-weight: 500;
 		}
 	}
 
