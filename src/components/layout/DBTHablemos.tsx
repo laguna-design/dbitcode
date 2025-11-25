@@ -1,3 +1,5 @@
+import {DBTArrowRightUp} from "../shared/icons/DBTarrowRU"
+
 type HablemosProps = {onOpenForm: () => void;};
 
 export const DBTHablemos = ({ onOpenForm }: HablemosProps) => (
@@ -11,9 +13,9 @@ export const DBTHablemos = ({ onOpenForm }: HablemosProps) => (
 						Comienza a ser impecable, no te conformes con menos
 					</p>
 				</div>
-				<button className="btn btn--M btn--dark" onClick={onOpenForm}>Hablemos 🡥</button>
-
+				<button className="btn btn--M btn--dark" onClick={onOpenForm}>Hablemos <DBTArrowRightUp width={16} height={16} color="#ffffff" className="my-icon" /></button>
 			</article>
+			<img className="DBT-gif" src="dbitcode.gif" alt="dBitdcode" />
 		</section>
 	</>
 );

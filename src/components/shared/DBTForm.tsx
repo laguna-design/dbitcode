@@ -1,4 +1,6 @@
 import { useForm, ValidationError } from "@formspree/react";
+import {DBTSend} from "./icons/DBTSend"
+
 
 function DBTForm() {
 const [state, handleSubmit] = useForm("xqaokwpd"); // replace with your Formspree ID
@@ -75,7 +77,7 @@ return (
 		</div>
 
 		<div className="form__actions">
-			<button type="submit" className="form__button btn btn--M btn--dark" disabled={state.submitting}>Enviar →</button>
+			<button type="submit" className="form__button btn btn--M btn--dark" disabled={state.submitting}>Enviar <DBTSend width={16} height={16} color="#fff" className="my-icon" /></button>
 		</div>
 	</form>
 );

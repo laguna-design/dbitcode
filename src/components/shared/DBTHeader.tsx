@@ -1,5 +1,6 @@
 import { useState } from "react";
 import DbitcodeLogo from "/dbitcode.svg";
+import {DBTArrowRightUp} from "./icons/DBTarrowRU"
 
 type HeaderProps = {
 onOpenForm: () => void;
@@ -102,7 +103,7 @@ return (
 
 	<div className="header__contact">
 		<button className="btn btn--link" onClick={onOpenForm}>
-		Empecemos 🡥
+		Empecemos <DBTArrowRightUp width={16} height={16} color="#4c4c4c" className="my-icon" />
 		</button>
 	</div>
 	</header>

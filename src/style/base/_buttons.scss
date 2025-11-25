@@ -5,6 +5,8 @@ a.btn{
 	border-radius: .25rem;
 	font-weight: 400;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
 }
 
 button.btn--M{
@@ -38,5 +40,12 @@ a.btn--link{
 	color: vars.$DBC-GreyScale-500;
 	&:hover{
 		color: vars.$Brand-DBC-Mars-Flare;
+		svg{
+			path{
+				stroke: vars.$Brand-DBC-Mars-Flare;
+			}
+		}
 	}
 }
+
+

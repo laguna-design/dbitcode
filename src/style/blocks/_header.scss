@@ -84,12 +84,13 @@
 			position: absolute;
 			overflow: scroll;
 			background-color: vars.$DBC-GreyScale-100;
-			top: 93px;
+			top: 90px;
 			left: 0;
 			width: 100vw;
 			align-items: center;
-			padding: .5rem 2rem;
+			padding: .5rem 3rem;
 			border-bottom: 1px solid vars.$DBC-GreyScale-200;
+			border-top: 1px solid vars.$DBC-GreyScale-200;
 		}
 
 		@include mixins.respond-to("overtablet") {
@@ -134,6 +135,11 @@
 
 	&__contact {
 		display: none;
+
+		.btn{
+			gap:.25rem;
+		}
+
 
 		@include mixins.respond-to("overtablet") {
 		display: flex;

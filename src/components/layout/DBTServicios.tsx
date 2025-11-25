@@ -1,3 +1,6 @@
+import {DBTArrowRightUp} from "../shared/icons/DBTarrowRU"
+
+
 type ServiciosProps = {
 	onOpenForm: () => void;
 };
@@ -11,7 +14,7 @@ export const DBTServicios = ({ onOpenForm }: ServiciosProps) => (
 					<h2 className="services__title">No vendemos humo</h2>
 					<p className="services__description">Estas son las teconologías que dominamos. No hacemos trabajo a medias, nuestro código es sólido, sostenible y enfocado a quitarte dolores de cabeza.</p>
 				</div>
-				<button className="btn btn--M btn--light" onClick={onOpenForm}>¿Qué necesitas? 🡥</button>
+				<button className="btn btn--M btn--light" onClick={onOpenForm}>¿Qué necesitas? <DBTArrowRightUp width={16} height={16} color="#4c4c4c" className="my-icon" /></button>
 			</article>
 			<div className="services__carousel-wrapper">
 				<ul className="services__carousel">

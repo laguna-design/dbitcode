@@ -1,4 +1,5 @@
-import DbitcodeLogo from "/dbitcode.svg"; // ✅ relative import
+import DbitcodeLogo from "/dbitcode.svg";
+import { DBTArrowRightUp } from "./icons/DBTarrowRU"
 
 type FooterProps = {
 onOpenForm: () => void;
@@ -59,7 +60,7 @@ return (
 
 			<li className="footer__menu-item">
 				<button className="btn btn--link" onClick={onOpenForm}>
-				Hablemos 🡥
+					Hablemos <DBTArrowRightUp width={16} height={16} color="#4c4c4c" className="my-icon" />
 				</button>
 			</li>
 			
@@ -69,7 +70,7 @@ return (
 		<section className="footer__contact">
 			<h6 className="footer__contact-title">Contacto</h6>
 			<a className="btn btn--link" href="mailto:info@dbitcode.com">
-			info@dbitcode.com 🡥
+			info@dbitcode.com <DBTArrowRightUp width={16} height={16} color="#4c4c4c" className="my-icon" />
 			</a>
 			<address className="footer__address">
 			Dbitcode consulting SL.

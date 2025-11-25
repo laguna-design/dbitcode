@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as mixins;
 
 .hero{
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	align-items: flex-end;
 	flex-direction: column;
@@ -15,15 +15,14 @@
 	}
 	.hero__content{
 		width: 100%;
+		min-height: calc(100vh - 280px);
 		padding: 0 2rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		flex-wrap: wrap;
 		align-content: flex-start;
-		gap: 1rem;
+		gap: 3rem;
 		padding-top: 2rem;
-		height: 100%;
 		@include mixins.respond-to("overtablet"){		
 			flex-direction: column-reverse;
 		}

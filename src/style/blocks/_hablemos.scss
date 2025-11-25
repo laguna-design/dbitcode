@@ -1,9 +1,31 @@
+@use "../abstracts/mixins" as mixins;
 .hablemos{
 	padding: 0 2rem;
-	.hablemos__content{
+	display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+
+	
+	&__header{
+		display: flex;
+		flex-direction: column;
+		gap: 0.8rem;
+		@include mixins.respond-to("overtablet"){
+			gap: 0.0;
+		}
+	}
+	
+	&__content{
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		gap:1.5rem;
+	}
+}
+.DBT-gif{
+	height: 200px;
+	display: none;
+	@include mixins.respond-to("overtablet"){
+		display: initial;
 	}
 }
