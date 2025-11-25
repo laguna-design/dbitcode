@@ -7,19 +7,18 @@ type ModalProps = {
 };
 
 function DBTModal({ isOpen, onClose, children }: ModalProps) {
-  const [visible, setVisible] = useState(isOpen);
-  const [closing, setClosing] = useState(false);
+  const [visible, setVisible] = useState(false);
+  const [openClass, setOpenClass] = useState(false);
 
   useEffect(() => {
     if (isOpen) {
       setVisible(true);
-      setClosing(false);
+      // Delay adding the open class so CSS transitions can kick in
+      const timer = setTimeout(() => setOpenClass(true), 20);
+      return () => clearTimeout(timer);
     } else if (visible) {
-      setClosing(true);
-      const timer = setTimeout(() => {
-        setVisible(false);
-        setClosing(false);
-      }, 300); // match CSS transition duration
+      setOpenClass(false);
+      const timer = setTimeout(() => setVisible(false), 300); // match CSS transition
       return () => clearTimeout(timer);
     }
   }, [isOpen, visible]);
@@ -27,7 +26,7 @@ function DBTModal({ isOpen, onClose, children }: ModalProps) {
   if (!visible) return null;
 
   return (
-    <div className={`modal ${isOpen ? "modal--open" : ""} ${closing ? "modal--closing" : ""}`}>
+    <div className={`modal ${openClass ? "modal--open" : ""}`}>
       <div className="modal__overlay" onClick={onClose}></div>
       <div className="modal__content">
         <header className="modal__header">

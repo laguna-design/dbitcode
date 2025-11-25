@@ -11,7 +11,7 @@ export const DBTLoQueHacemos = () => (
 
 			<dl className="lo-que-hacemos__list">
 			
-				<div>
+				<div className="lo-que-hacemos__item">
 					<dt className="lo-que-hacemos__term">
 						<h6>Fiabilidad operativa</h6>
 					</dt>
@@ -20,7 +20,7 @@ export const DBTLoQueHacemos = () => (
 					</dd>
 				</div>
 
-				<div>
+				<div className="lo-que-hacemos__item">
 					<dt className="lo-que-hacemos__term">
 						<h6>Empatía técnica</h6>
 					</dt>
@@ -29,7 +29,7 @@ export const DBTLoQueHacemos = () => (
 					</dd>
 				</div>
 
-				<div>	
+				<div className="lo-que-hacemos__item">	
 					<dt className="lo-que-hacemos__term">
 						<h6>Compromiso a largo plazo</h6>
 					</dt>
@@ -39,7 +39,7 @@ export const DBTLoQueHacemos = () => (
 				</div>
 				
 
-				<div>	
+				<div className="lo-que-hacemos__item">	
 					<dt className="lo-que-hacemos__term">
 						<h6>Comunicación clara</h6>
 					</dt>
@@ -48,7 +48,7 @@ export const DBTLoQueHacemos = () => (
 					</dd>
 				</div>
 				
-				<div>	
+				<div className="lo-que-hacemos__item">	
 					<dt className="lo-que-hacemos__term">
 						<h6>Agilidad y respuesta</h6>
 					</dt>

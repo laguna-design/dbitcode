@@ -3,7 +3,7 @@
 
 .lo-que-hacemos{
 	gap: 3rem;
-	.lo-que-hacemos__list {
+	&__list {
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
@@ -13,17 +13,27 @@
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			grid-template-rows: repeat(2, auto);
-		}
-		.lo-que-hacemos__term {
-			.lo-que-hacemos__definition {
-				font-family: var(--font-primary);
-				font-weight: 400;
-				font-size: .9rem;
-				color: vars.$DBC-GreyScale-400;
-				line-height: 146%;
-			}
+			gap: 3rem 2.5rem;
 		}
 	}
+
+	&__term{
+		color: vars.$DBC-GreyScale-600;
+	}
+
+	&__item{
+		display: flex;
+		flex-direction: column;
+		gap: .5rem;
+	}
+	&__definition {
+		font-family: var(--font-primary);
+		font-weight: 400;
+		font-size: .9rem;
+		color: vars.$DBC-GreyScale-500;
+		line-height: 146%;
+	}
+		
 }
 
 

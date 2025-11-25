@@ -64,7 +64,13 @@ return (
 		</div>
 	</main>
 
-	<DBTFooter onOpenForm={openFormModal} />
+	<DBTFooter
+		onOpenForm={openFormModal}
+		onScrollQuehacemos={() => scrollTo(quehacemosRef)}
+		onScrollServicios={() => scrollTo(serviciosRef)}
+		onScrollCasos={() => scrollTo(casosRef)}
+		onScrollHablemos={() => scrollTo(hablemosRef)}
+	/>
 
 	<DBTModal isOpen={isOpen} onClose={closeFormModal}>
 		<DBTForm />

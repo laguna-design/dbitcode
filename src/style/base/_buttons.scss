@@ -1,6 +1,7 @@
 @use '../abstracts/variables' as vars;
 
-button.btn{
+button.btn,
+a.btn{
 	border-radius: .25rem;
 	font-weight: 400;
 	cursor: pointer;
@@ -31,7 +32,8 @@ button.btn--dark{
 
 
 
-button.btn--link{
+button.btn--link,
+a.btn--link{
 	font-size: .85rem;
 	color: vars.$DBC-GreyScale-500;
 	&:hover{
