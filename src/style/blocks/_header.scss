@@ -73,11 +73,11 @@
 		background: none;
 		border: none;
 		cursor: pointer;
-		padding: 16px 0;
-
+		padding: 1rem 0;
+		transition: all 0.7s ease;
+		border-bottom: 2px solid transparent;
 		&:hover {
 			border-bottom: 2px solid vars.$Brand-DBC-Mars-Flare;
-			padding: 14px 0;
 		}
 
 	}

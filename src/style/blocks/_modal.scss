@@ -16,13 +16,21 @@
 	}
 
 	&__content {
-		position: relative;
 		background: vars.$DBC-GreyScale-100;
-		padding: 2rem;
-		border-radius: 8px;
-		max-width: 920px;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: 2.5rem;
+		border-radius: 1rem;
+		max-width: 801px;
 		width: 100%;
 		z-index: 1001;
+		gap: 2rem;
+
+		// Initial state
+    transform: translateY(32px);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 	}
 	
 	&__header{
@@ -33,12 +41,34 @@
 
 	&__close {
 		position: absolute;
-		top: 1rem;
-		right: 1rem;
+		top: 3rem;
+		right: 2.5rem;
 		background: none;
 		border: none;
 		font-size: .85rem;
 		cursor: pointer;
 		color: vars.$DBC-GreyScale-500;
 	}
+
+	// Active state
+	&.modal--open {
+		.modal__overlay {
+		opacity: 1;
+		}
+		.modal__content {
+		transform: translateY(0);
+		opacity: 1;
+		}
+	}
+
+	&.modal--closing {
+		.modal__overlay {
+		opacity: 0;
+		}
+		.modal__content {
+		transform: translateY(32px);
+		opacity: 0;
+		}
+	}
+
 }

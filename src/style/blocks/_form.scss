@@ -31,13 +31,25 @@
 
 }
 
-
-
 input.form__input,
 textarea.form__textarea{
-	background-color: vars.$DBC-GreyScale-100;
+	background-color: vars.$DBC-GreyScale-102;
 	border: 1px solid vars.$DBC-GreyScale-200;
 	border-radius: 4px;
 	padding: .5rem;
 	font-size: 0.8rem;
+}
+
+.form__checkbox-label{
+	font-size: .9rem;
+	color: vars.$DBC-GreyScale-500;
+    display:flex;
+    flex-direction: row;
+    gap: 0.6rem;
+}
+
+.form__actions{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
