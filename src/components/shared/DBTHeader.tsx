@@ -46,7 +46,10 @@ return (
 		onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
 		aria-label="Abrir menú"
 		>
-		☰
+		<svg width="32" height="11" viewBox="0 0 32 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<line x1="0.5" y1="0.5" x2="31.5" y2="0.5" stroke="#4C4C4C" stroke-linecap="round"/>
+			<line x1="0.5" y1="10.5" x2="31.5" y2="10.5" stroke="#4C4C4C" stroke-linecap="round"/>
+		</svg>
 		</button>
 
 		<nav className={`header__nav ${isMobileMenuOpen ? "is-open" : ""}`}>
