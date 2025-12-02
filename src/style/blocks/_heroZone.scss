@@ -21,15 +21,17 @@
 		flex-direction: column;
 		justify-content: space-between;
 		align-content: flex-start;
+		align-items: center;
 		gap: 3rem;
-		padding-top: 2rem;
+		padding-top: 3rem;
 		@include mixins.respond-to("overtablet"){		
 			flex-direction: column-reverse;
 		}
 		&-text{
 			display: flex;
 			flex-direction: column;
-			gap:1rem
+			gap:1rem;
+			width:100%;
 		}
 		.hero__tagline-wrapper{
 			color: vars.$Brand-DBC-Mars-Flare;	
@@ -116,12 +118,20 @@
 
 	&__video-background{
 		width: 100%;
+		height: auto;
 		max-width: 500px;
-		position: initial;
+		//position: initial;
+		overflow: hidden;
+		display: block;
+		background-color: transparent;
+		border: none;
+		outline: 2px solid #fff;
+		outline-offset: -1px;
+		object-fit: cover;
 		@include mixins.respond-to("overtablet"){
-			position: absolute;
-			right: 0;
-			top: 146px;
+			//position: absolute;
+			//right: 0;
+			//top: 146px;
 			z-index: -1;
 			max-width: 370px;
 		}
