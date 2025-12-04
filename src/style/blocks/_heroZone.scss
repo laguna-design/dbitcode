@@ -73,11 +73,9 @@
 				color: vars.$Brand-DBC-Mars-Flare;
 				min-height: 3.5rem;
 
-			@include mixins.respond-to("overtablet"){
-				min-height: 6rem;
-			}
-
-
+				@include mixins.respond-to("overtablet"){
+					min-height: 6rem;
+				}
 			}
 		}
 		h5.hero__description{
@@ -114,30 +112,27 @@
 		}
 	}
 
-
-
 	&__video-background{
 		width: 100%;
-		height: auto;
+
 		max-width: 500px;
-		//position: initial;
-		overflow: hidden;
-		display: block;
+		position: initial;
 		background-color: transparent;
-		border: none;
 		outline: 2px solid #fff;
 		outline-offset: -1px;
 		object-fit: cover;
 		@include mixins.respond-to("overtablet"){
-			//position: absolute;
-			//right: 0;
-			//top: 146px;
 			z-index: -1;
 			max-width: 370px;
 		}
 
 		@include mixins.respond-to("overdesktop"){
 			max-width:450px;
+		}
+		@include mixins.respond-to("heightXXL"){
+			min-height: calc(100vh - 50rem);
+			width: calc(100% - 10rem);
+			max-width: none;
 		}
 
 	}

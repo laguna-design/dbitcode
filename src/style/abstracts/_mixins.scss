@@ -11,20 +11,19 @@
 	}
 } @else if $breakpoint == "overdesktop" {
 	@media screen and (min-width: vars.$breakpoint-overdesktop) {
-	@if $pointer == "fine" {
-		@media (pointer: fine) { @content; }
-	} @else {
-		@content;
+		@if $pointer == "fine" {
+			@media (pointer: fine) { @content; }
+		} @else {
+			@content;
+		}
 	}
-	}
-} @else if $breakpoint == "overtabletunderdesktop" {
-	$max-width: vars.$breakpoint-overdesktop - 1px;
-	@media screen and (min-width: vars.$breakpoint-overtablet) and (max-width: $max-width) {
-	@if $pointer == "fine" {
-		@media (pointer: fine) { @content; }
-	} @else {
-		@content;
-	}
+} @else if $breakpoint == "heightXXL" {
+	@media screen and (min-height: vars.$breakpoint-heightXXL) {
+		@if $pointer == "fine" {
+			@media (pointer: fine) { @content; }
+		} @else {
+			@content;
+		}
 	}
 }
 }
