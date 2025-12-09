@@ -13,6 +13,9 @@
 	@include mixins.respond-to("overtablet"){		
 		gap: 4.5rem;
 	}
+	@include mixins.respond-to("heightXXL"){
+		min-height:unset;
+	}
 	.hero__content{
 		width: 100%;
 		min-height: calc(100vh - 280px);
@@ -26,6 +29,9 @@
 		padding-top: 3rem;
 		@include mixins.respond-to("overtablet"){		
 			flex-direction: column-reverse;
+		}
+		@include mixins.respond-to("heightXXL"){
+			min-height:unset;
 		}
 		&-text{
 			display: flex;
@@ -121,18 +127,21 @@
 		outline: 2px solid #fff;
 		outline-offset: -1px;
 		object-fit: cover;
+		aspect-ratio: 16 / 9;
 		@include mixins.respond-to("overtablet"){
 			z-index: -1;
 			max-width: 370px;
 		}
 
 		@include mixins.respond-to("overdesktop"){
-			max-width:450px;
+			max-width: 600px;
 		}
 		@include mixins.respond-to("heightXXL"){
-			min-height: calc(100vh - 50rem);
-			width: calc(100% - 10rem);
-			max-width: none;
+			/*min-height: calc(70vh - 290px);
+			width: calc(100% - 10rem);*/
+			max-width: unset;
+		aspect-ratio: 16 / 9;
+
 		}
 
 	}
