@@ -21,7 +21,7 @@ const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
 const handleScroll = (scrollFn: () => void) => {
 	scrollFn();
-	setIsMobileMenuOpen(false); // close menu after click
+	setIsMobileMenuOpen(false);
 };
 
 return (

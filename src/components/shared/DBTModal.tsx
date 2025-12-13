@@ -14,12 +14,11 @@ const [openClass, setOpenClass] = useState(false);
 useEffect(() => {
 	if (isOpen) {
 	setVisible(true);
-	// Delay adding the open class so CSS transitions can kick in
 	const timer = setTimeout(() => setOpenClass(true), 20);
 	return () => clearTimeout(timer);
 	} else if (visible) {
 	setOpenClass(false);
-	const timer = setTimeout(() => setVisible(false), 300); // match CSS transition
+	const timer = setTimeout(() => setVisible(false), 300);
 	return () => clearTimeout(timer);
 	}
 }, [isOpen, visible]);

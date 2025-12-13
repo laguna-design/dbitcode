@@ -3,7 +3,7 @@ import {DBTSend} from "./icons/DBTSend"
 
 
 function DBTForm() {
-const [state, handleSubmit] = useForm("xqaokwpd"); // replace with your Formspree ID
+const [state, handleSubmit] = useForm("xqaokwpd");
 
 if (state.succeeded) {
 	return <p className="form__success">¡Gracias por tu mensaje!</p>;

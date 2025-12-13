@@ -29,7 +29,7 @@ const hablemosRef = useRef<HTMLDivElement>(null);
 
 const scrollTo = (ref: React.RefObject<HTMLDivElement | null>) => {
   if (ref.current) {
-    const offset = 116; // height of your fixed header
+    const offset = 116;
     const top = ref.current.getBoundingClientRect().top + window.scrollY - offset;
     window.scrollTo({ top, behavior: "smooth" });
   }

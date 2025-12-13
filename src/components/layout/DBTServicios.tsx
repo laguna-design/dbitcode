@@ -1,6 +1,5 @@
 import {DBTArrowRightUp} from "../shared/icons/DBTarrowRU"
 
-
 type ServiciosProps = {
 	onOpenForm: () => void;
 };
