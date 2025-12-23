@@ -6,7 +6,8 @@ import { DBTHeroZone } from "../components/layout/DBTheroZone";
 import { DBTLoQueHacemos } from "../components/layout/DBTLoQueHacemos";
 import { DBTServicios } from "../components/layout/DBTServicios";
 import { DBTCasosDeExito } from "../components/layout/DBTCasosDeExito";
-import { DBTHablemos } from "../components/layout/DBTHablemos";
+// import { DBTHablemos } from "../components/layout/DBTHablemos";
+import { DBTConocenos } from "../components/layout/DBTConocenos";
 import { DBTFooter } from "../components/shared/DBTFooter";
 
 // Modal form
@@ -60,7 +61,8 @@ return (
 		</div>
 
 		<div ref={hablemosRef}>
-		<DBTHablemos onOpenForm={openFormModal} />
+		<DBTConocenos onOpenForm={openFormModal} />
+
 		</div>
 	</main>
 

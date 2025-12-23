@@ -1,5 +1,5 @@
 @use "../abstracts/mixins" as mixins;
-.hablemos{
+.conocenos{
 	padding: 0 2rem;
 	display: flex;
     flex-direction: row;
@@ -14,6 +14,10 @@
 			gap: 0.0;
 		}
 	}
+
+	&__title{
+		margin-bottom: 1.5rem;
+	}
 	
 	&__content{
 		display: flex;
@@ -21,9 +25,25 @@
 		align-items: flex-start;
 		gap:1.5rem;
 	}
+
+	&__description{
+		display:flex;
+		flex-direction: column;
+		align-items: center;
+		@include mixins.respond-to("overdesktop"){
+			flex-direction: row;
+			gap:2rem;
+			align-items: flex-start;
+		}
+		p{
+			margin-bottom: 1rem;
+		}
+	}
+
+	
 }
 .DBT-gif{
-	height: 200px;
+	height: 150px;
 	display: none;
 	@include mixins.respond-to("overtablet"){
 		display: initial;

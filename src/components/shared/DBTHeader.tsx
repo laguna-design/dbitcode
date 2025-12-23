@@ -1,6 +1,6 @@
 import { useState } from "react";
 import DbitcodeLogo from "/dbitcode.svg";
-import {DBTArrowRightUp} from "./icons/DBTarrowRU"
+// import {DBTArrowRightUp} from "./icons/DBTarrowRU"
 
 type HeaderProps = {
 onOpenForm: () => void;
@@ -92,20 +92,26 @@ return (
 				Casos de éxito
 			</button>
 			</li>
+			
 			<li className="header__menu-item">
 			<button onClick={() => handleScroll(onScrollHablemos)}>
-				Hablemos
+				Conócenos
+			</button>
+			</li>
+			<li className="header__menu-item">
+			<button onClick={onOpenForm}>
+				Hablemos 
 			</button>
 			</li>
 		</ul>
 		</nav>
 	</div>
 
-	<div className="header__contact">
+	{/* <div className="header__contact">
 		<button className="btn btn--link" onClick={onOpenForm}>
 		Empecemos <DBTArrowRightUp width={16} height={16} color="#4c4c4c" className="my-icon" />
 		</button>
-	</div>
+	</div> */}
 	</header>
 );
 };
